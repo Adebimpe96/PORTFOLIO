@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 5px;
+}
+body{
+  background: linear-gradient(pink,white);
+  font-family:  'Roboto', sans-serif;
+  /* overflow-y: hidden; */
+  
+}
+.display{
+    width: 400px;
+    height: 300px;
+    border-radius: 50px;
+    /* margin-left: 70%; */
+}
+.main-container{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+  height: 80vh;
+
+} 
+.text{
+  line-height: 1.2;
+  font-size: 30px;
+}
+.container-md{
+  background-color: #fff;  
+  width: 80%;
+  height: 100%;
+  border-radius: 20px;
+  margin-top: 15px
+}
+.links a{
+  color: rgb(249, 149, 166);
+  /* border-bottom: 1px solid rgb(106, 34, 34); */
+}
+.links a:hover{
+  border: 1px solid rgb(224, 219, 222);
+  border-radius: 20px;
+  background-color:pink;
+}
+.active{
+  border: 1px solid pink;
+  border-radius: 20px;
+  background-color:beige;
+}
+#hello{
+  font-size: 60px;
+  font-weight: bolder;
+}
+.name{
+  font-weight: bolder;
+  font-style: italic;
+  font-size: 40px;
+}
+.my_work,.chat{
+  margin-top:2px ;
+  margin-left: 70px;
+  background-color: palevioletred;
+  border-radius: 15px;
+  color: black;
+  border: 1px solid white;
+  height: 40px;
+  width: 100px;
+  cursor: pointer;
+}
+.my_work{
+  background-color: antiquewhite;
+}
+#I_do h2{
+  text-transform: capitalize;
+  color: palevioletred;
+}
+#I_do{
+  font-weight: bold;
+  text-align: center;
+  margin: 20px;
+  border-top: 2px solid pink;
+}
+.work a:hover{
+  background-color: rgba(rgb(250, 244, 244), rgb(250, 224, 245), rgb(222, 222, 228), 0.5);
+}
+.work img:focus{
+background-color: transparent;
+}
+.media{
+  display: flex;
+  justify-content: center;
+}
+.contact{
+  text-align: center;
+  font-size: 30px;
+  
+}
+.form-wrapper{
+  display: grid;
+  width: 100%;
+  place-items: center ;
+  background-color: pink;
+}
+form{
+  width: 100%;
+}
+.button, .submit-button{
+  width: 150px;
+  background-color: palevioletred;
+  height: 40px;
+  border: none;
+  margin:auto;
+  border-radius: 10px;
+}
+.submit-button{
+  margin-left: 10%;
+}
+.form-group{
+  background-color: #fff;  
+  width: 50%;
+  /* height: 100%; */
+  border-radius: 20px;
+  margin-top: 15px
+}
+label {
+  display: flex;
+  align-items: center;
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+input,
+button,
+select,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+.input-textarea{
+min-height: 120px;
+  width: 70%;
+  padding: 0.625rem;
+  resize: vertical;
+}
+.footer{
+  text-align: center;
+  font-size: 25px;
+  /* background-color: beige; */
+  margin: 0;
+}

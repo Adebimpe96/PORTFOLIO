@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>zainab sanni</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./port.css" />
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <h1 class="logo"><span class="caps">D</span>ebimpe</h1>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="page-text">
+          <p class="engr">Software engineer</p>
+          <h1>Hey!</h1>
+          <h2>
+            I am <span class="name">Zainab Adebimpe</span><br />I create
+            beautiful and scalable <br />
+            web applications you will love...
+          </h2>
+        </div>
+      </div>
+    </div>
+    <!-- About Me section -->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-1">
+            <img src="./images/debimpe.jpg" alt="profile" srcset="" />
+          </div>
+          <div class="col-2">
+            <h3 class="about-head3">About</h3>
+            <p>
+              I am a young and passionate about exploring the beauties of the
+              web. <br />Creating interfaces that are user friendly led me into
+              the front end development journey, and I am always willing and
+              open to learning. <br />I have great people around who has made
+              the journey so far interesting and challenging for me.
+            </p>
+            <div class="sub-titles">
+              <p class="sub-links active-link" onclick="openTab('skills')">
+                Skills
+              </p>
+              <p class="sub-links" onclick="openTab('tech')">Technologies</p>
+            </div>
+            <!-- skills -->
+            <div class="sub-content active-tab" id="skills">
+              <ul>
+                <li>
+                  <span>Web design</span> <br />Designing web applications
+                </li>
+                <li>
+                  <span>CMS design design</span> <br />Building websites with
+                  CMS
+                </li>
+                <li>
+                  <span>Product support</span> <br />Supporting digital products
+                  to achieve success.
+                </li>
+              </ul>
+            </div>
+            <!-- Technologies -->
+            <div class="sub-content" id="tech">
+              <ul>
+                <li>
+                  <span>HTML5/CSS3/JAVASCRIPT</span>
+                </li>
+                <li>
+                  <span>ReactJS</span>
+                </li>
+                <li><span>Git/Github</span> <br /></li>
+              </ul>
+            </div>
+          </div>
+          <!-- projects -->
+          <div id="projects">
+            <h3 class="projects-head3">My projects</h3>
+            <div class="projects-list">
+              <div>
+                <i class="fa-solid fa-gamepad"></i>
+                <h2>Pig game</h2>
+                <p>
+                  A game that allows two players do some magic with dice
+                  roll👍Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Fugit, quos!
+                </p>
+                <a href="#">Check</a>
+              </div>
+              <div>
+                <i class="fa-brands fa-react"></i>
+                <h2>CRF</h2>
+                <p>
+                  An application for reporting crimes that happens around us to
+                  the right officials.👍Lorem ipsum dolor sit, amet consectetur
+                  adipisicing elit. Dolorum, et.
+                </p>
+                <a href="#">Check</a>
+              </div>
+              <div>
+                <i class="fa-solid fa-code">#</i>
+                <h2>BBgist</h2>
+                <p>
+                  A mini blog site for adding top stories😘 Lorem ipsum dolor
+                  sit amet consectetur adipisicing elit. Hic, cupiditate...
+                </p>
+                <a href="#">Check</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- javascript functionalities -->
+    <script src="./port.js">
+
+                    let tablinks = document.getElementsByClassName("sub-titles");
+                    let tabcontents = document.getElementsByClassName("sub-contents");
+             openTab =(tabname)=>{
+                for (tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for (tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab")
+            };
+    </script>
+  </body>
+</html>
