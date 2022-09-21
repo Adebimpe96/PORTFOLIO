@@ -29,11 +29,15 @@
         <div class="page-text">
           <p class="engr">Software engineer</p>
           <h1>Hey!</h1>
-          <h2>
-            I am <span class="name">Zainab Adebimpe</span><br />I create
-            beautiful and scalable <br />
-            web applications you will love...
-          </h2>
+            <h2>
+              I am <span class="name"></span><br />I create
+              beautiful and scalable <br />web applications you will love...
+              <div id="typings">
+                <p>Zainab Adebimpe </p>
+                <p>a Software Developer </p>
+                <p>a content creator </p>
+              </div>
+            </h2>
         </div>
       </div>
     </div>
@@ -45,7 +49,7 @@
             <img src="./images/debimpe.jpg" alt="profile" srcset="" />
           </div>
           <div class="col-2">
-            <h3 class="about-head3">About</h3>
+            <h3 class="head">About</h3>
             <p>
               I am a young and passionate about exploring the beauties of the
               web. <br />Creating interfaces that are user friendly led me into
@@ -66,12 +70,11 @@
                   <span>Web design</span> <br />Designing web applications
                 </li>
                 <li>
-                  <span>CMS design design</span> <br />Building websites with
-                  CMS
+                  <span>CMS design</span> <br />Building websites with CMS
                 </li>
                 <li>
-                  <span>Product support</span> <br />Supporting digital products
-                  to achieve success.
+                  <span>Business support</span> <br />Supporting digital
+                  products to achieve success.
                 </li>
               </ul>
             </div>
@@ -90,7 +93,7 @@
           </div>
           <!-- projects -->
           <div id="projects">
-            <h3 class="projects-head3">My projects</h3>
+            <h3 class="head">My projects</h3>
             <div class="projects-list">
               <div>
                 <i class="fa-solid fa-gamepad"></i>
@@ -113,7 +116,7 @@
                 <a href="#">Check</a>
               </div>
               <div>
-                <i class="fa-solid fa-code">#</i>
+                <i class="fa-solid fa-code"></i>
                 <h2>BBgist</h2>
                 <p>
                   A mini blog site for adding top stories😘 Lorem ipsum dolor
@@ -123,24 +126,95 @@
               </div>
             </div>
           </div>
+          <!-- Contact -->
+          <div class="container">
+            <div class="row">
+              <div class="contact-left">
+                <h3 class="head">Contact Me</h3>
+                <p><i class="fa-solid fa-paper-plane"></i>contact@admin.com</p>
+                <p><i class="fa-solid fa-phone"></i>08123472020</p>
+                <div class="social-media">
+                  <a href="https://www.linkedin.com/in/zainab-sanni-16794619a/">
+                    <i class="fa-brands fa-linkedin"></i
+                  ></a>
+                  <a href="https://www.facebook.com/adebimpe.sannizainab/">
+                    <i class="fa-brands fa-square-facebook"></i
+                  ></a>
+                  <a href="https://twitter.com/Debimpegold">
+                    <i class="fa-brands fa-square-twitter"></i
+                  ></a>
+                  <a href="https://www.instagram.com/mhizadebimpez/">
+                    <i class="fa-brands fa-square-instagram"></i>
+                  </a>
+                </div>
+                <a
+                  href="./images/ZAINAB ADEBIMPE SANNI.pdf"
+                  download
+                  class="btn"
+                  >My resume</a
+                >
+              </div>
+              <div class="contact-right">
+                <form action="#">
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Enter your name"
+                    required
+                  />
+                  <br />
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    required
+                  />
+                  <textarea
+                    name="message"
+                    id="message"
+                    cols="30"
+                    rows="6"
+                    placeholder="Send me a message..."
+                  ></textarea>
+                  <button type="submit" class="btn btn2">Send</button>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+    <div class="copyright">
+      <p>&copy; Coded <i class="fa-solid fa-code"></i> Techsis 2022.</p>
     <!-- javascript functionalities -->
-    <script src="./port.js">
-
-                    let tablinks = document.getElementsByClassName("sub-titles");
-                    let tabcontents = document.getElementsByClassName("sub-contents");
-             openTab =(tabname)=>{
-                for (tablink of tablinks){
-                    tablink.classList.remove("active-link");
-                }
-                for (tabcontent of tabcontents){
-                    tabcontent.classList.remove("active-tab");
-                }
-                event.currentTarget.classList.add("active-link");
-      document.getElementById(tabname).classList.add("active-tab")
-            };
+<!-- ...........TypedJs CDN link.......... -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+      let tablinks = document.getElementsByClassName("sub-titles");
+      let tabcontents = document.getElementsByClassName("sub-contents");
+      const openTab = (tabname) => {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      };
+//..................TypedJs implementation..................
+      const options = {
+        stringsElement: '#typings',
+        typeSpeed: 100,
+        backSpeed: 100,
+        loop: true,
+        loopCount: Infinity,
+        cursorChar: "❤️",
+      }
+      const typed = new Typed(".name", options);
     </script>
   </body>
 </html>
+
