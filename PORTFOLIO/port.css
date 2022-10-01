@@ -6,6 +6,9 @@
     font-family: 'Roboto',sans-serif;
     scroll-behavior: smooth;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     background:#080808;
     color: #fff
@@ -58,6 +61,7 @@ nav ul li a:hover::after{
     width: 100%;
 }
 .page-text{
+    width: 100%;
     margin-top: 15%;
     font-size: 30px;
     line-height: 1.5;
@@ -80,6 +84,9 @@ nav ul li a:hover::after{
     color: #ababab;
 
 }
+#about h3{
+    margin-bottom: 30px;
+}
 .col-1 img{
     height: 400px;
     width: 100%;
@@ -97,8 +104,9 @@ nav ul li a:hover::after{
 .col-2{
     flex-basis: 60%;
 }
-.about-head3,.projects-head3{
+.head{
     font-size: 40px;
+    /* text-align: center; */
 }
 .sub-titles{
     display: flex;
@@ -178,4 +186,169 @@ transition: .5s;
     background: palevioletred;
     transform: translateY(-10px);
     color: #080808;
+}
+/* Contact */
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color: palevioletred;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-media{
+    margin-top: 30px;
+}
+.social-media a{
+    text-decoration: none;
+    margin-right: 15px;
+    font-size: 30px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform .5s;
+}
+.social-media a:hover{
+    color: palevioletred;
+    transform: translateY(-5px);
+}
+.btn {
+    width: 140px;
+    height: 37px;
+    border-radius: 5px;
+    padding: 8px;
+    background: rgb(206, 52, 103);
+    text-decoration: none;
+    color: #262626;
+    display: inline-block;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: 30px;
+}
+.btn:hover{
+    border: 1px solid palevioletred; 
+}
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    border: none;
+    width: 100%;
+    outline: none;
+    padding: 15px;
+    background: #262626;
+    margin: 15px 0;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 18px;
+}
+form .btn2{
+    margin-top: 5px;
+    padding: 5px 50px;
+    cursor: pointer;
+    font-size: 18px;
+}
+.copyright{
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    margin-bottom: 2px;
+    background: #262626;
+    font-weight: 300;
+}
+.copyright i{
+    color: palevioletred;
+}
+
+nav .fas{
+    display: none;
+}
+/* Media query for page on a small screen */
+
+@media only screen and (max-width:600px){
+    .logo{
+        font-size: 29px;
+    }
+    .caps{
+        font-size:40px ;
+    }
+    .page-text{
+        font-size: 20px;
+        width: 80%;
+        text-align:start;
+    }
+    .engr{
+        font-size: 18px;
+         
+    }
+    nav .fas{
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+    }
+    nav ul{
+        background: palevioletred;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition:right .6s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px
+    }
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        left:25px;
+        cursor: pointer;
+    }
+.head{
+    font-size: 30px;
+    text-align: center;
+}
+
+#about .col-1, #about .col-2{
+    flex-basis: 100%;
+}
+#about .col-1{
+    margin-bottom: 30px;
+}
+#about .col-2{
+    font-size: 15px;
+}
+.sub-links, .sub-content{
+    margin-left: 45px;
+    padding: 2px;
+}
+.projects-list{
+display: block;
+margin: 30px;
+padding: 5px 0;
+}
+.projects-list div{
+    margin: 25px
+}
+.contact-left, .contact-right{
+    flex-basis: 100%;
+}
+.lift{
+    margin-bottom: 20px;
+}
+}
+
+#submit{
+    display: block;
+    color: rgb(45, 128, 74);
+    margin-top: 20px;
 }
