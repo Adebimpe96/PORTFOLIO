@@ -19,12 +19,15 @@
       <div class="container">
         <nav>
           <h1 class="logo"><span class="caps">D</span>ebimpe</h1>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Contact</a></li>
+          <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fa-solid fa-xmark fas" onclick="closemenu()"></i>
           </ul>
+          <i class="fa-solid fa-bars fas" onclick="openmenu()"></i>
+          
         </nav>
         <div class="page-text">
           <p class="engr">Software engineer</p>
@@ -49,7 +52,7 @@
             <img src="./images/debimpe.jpg" alt="profile" srcset="" />
           </div>
           <div class="col-2">
-            <h3 class="head">About</h3>
+            <h3 class="head">About Me</h3>
             <p>
               I am a young and passionate about exploring the beauties of the
               web. <br />Creating interfaces that are user friendly led me into
@@ -87,6 +90,8 @@
                 <li>
                   <span>ReactJS</span>
                 </li>
+              <li><span>C# .Net Framework</span> <br /></li>
+            <li><span>C# WebAPI</span> <br /></li>
                 <li><span>Git/Github</span> <br /></li>
               </ul>
             </div>
@@ -126,8 +131,9 @@
               </div>
             </div>
           </div>
-          <!-- Contact -->
-          <div class="container">
+          <!-- Contact  Me Section -->
+         <div id="contact">
+           <div class="container">
             <div class="row">
               <div class="contact-left">
                 <h3 class="head">Contact Me</h3>
@@ -150,15 +156,15 @@
                 <a
                   href="./images/ZAINAB ADEBIMPE SANNI.pdf"
                   download
-                  class="btn"
+                  class="btn lift"
                   >My resume</a
                 >
               </div>
               <div class="contact-right">
-                <form action="#">
+                <form name="submit-to-google-sheet">
                   <input
                     type="text"
-                    name="name"
+                    name="Name"
                     id="name"
                     placeholder="Enter your name"
                     required
@@ -166,34 +172,36 @@
                   <br />
                   <input
                     type="email"
-                    name="email"
+                    name="Email"
                     id="email"
                     placeholder="Enter your email"
                     required
                   />
                   <textarea
                     name="message"
-                    id="message"
+                    id="Message"
                     cols="30"
                     rows="6"
                     placeholder="Send me a message..."
                   ></textarea>
                   <button type="submit" class="btn btn2">Send</button>
                 </form>
+                <span id="submit"></span>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
     <div class="copyright">
       <p>&copy; Coded <i class="fa-solid fa-code"></i> Techsis 2022.</p>
     <!-- javascript functionalities -->
 <!-- ...........TypedJs CDN link.......... -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
-      let tablinks = document.getElementsByClassName("sub-titles");
-      let tabcontents = document.getElementsByClassName("sub-contents");
+      let tablinks = document.getElementsByClassName("sub-links");
+      let tabcontents = document.getElementsByClassName("sub-content");
       const openTab = (tabname) => {
         for (tablink of tablinks) {
           tablink.classList.remove("active-link");
@@ -204,6 +212,15 @@
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
       };
+      const sidemenu = document.getElementById("sidemenu");
+
+      const openmenu = ()=>{
+sidemenu.style.right= "0";
+      }
+
+      const closemenu = ()=>{
+sidemenu.style.right= "-200px";
+      }
 //..................TypedJs implementation..................
       const options = {
         stringsElement: '#typings',
@@ -215,6 +232,21 @@
       }
       const typed = new Typed(".name", options);
     </script>
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbz3O8-w_OJfWZdZj0Cti6uanrd6PoKsYAAtKf5WGadVMvhtG4p-OATxpxbnnAdMd3Y/exec'
+      const form = document.forms['submit-to-google-sheet']
+    
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => {submit.innerHTML = "Your message has been sent successfully!"
+          setTimeout(function(){
+            submit.innerHTML = ""
+          }, 2000)
+          form.reset()
+        })
+          .catch(error => console.error('Error!', error.message))
+      })
+    </script>
   </body>
 </html>
-
